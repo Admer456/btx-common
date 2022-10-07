@@ -1,0 +1,6 @@
+[submodule "elegy-rhi"]
+	path = extern/elegy-rhi
+	url = https://github.com/Admer456/elegy-rhi.git
+[submodule "adm-utils"]
+	path = extern/adm-utils
+	url = https://github.com/Admer456/adm-utils.git
