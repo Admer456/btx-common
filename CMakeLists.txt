@@ -3,8 +3,14 @@
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_STANDARD_REQUIRED ON )
 
-set( ${BTX_COMMON_DIR} ${CMAKE_CURRENT_SOURCE_DIR} )
+set( BTX_COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR} )
 set_property( GLOBAL PROPERTY USE_FOLDERS ON )
+
+option( BTX_COMMON_WITH_RHI "Build ElegyRhi too if working with graphics. Else just use its headers" OFF )
+
+if ( BTX_COMMON_WITH_RHI )
+	add_subdirectory( extern/elegy-rhi )
+endif()
 
 ## Set up adm-utils
 add_subdirectory( extern/adm-utils )
