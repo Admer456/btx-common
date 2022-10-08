@@ -24,10 +24,10 @@ set( BTX_COMMON_SOURCES
 	${BTX_COMMON_DIR}/common/interfaces/IInput.hpp
 	${BTX_COMMON_DIR}/common/interfaces/IMaterialManager.hpp
 	${BTX_COMMON_DIR}/common/interfaces/IModelManager.hpp
-	${BTX_COMMON_DIR}/common/interfaces/IRenderFrontend.hpp
 	${BTX_COMMON_DIR}/common/interfaces/IPluginSystem.hpp
 	${BTX_COMMON_DIR}/common/interfaces/plugins/IApplication.hpp
 	${BTX_COMMON_DIR}/common/interfaces/plugins/IPlugin.hpp
+	${BTX_COMMON_DIR}/common/interfaces/plugins/IRenderFrontend.hpp
 	${BTX_COMMON_DIR}/common/console/CVar.hpp
 	${BTX_COMMON_DIR}/common/console/CVar.cpp
 	${BTX_COMMON_DIR}/common/core/IWindow.hpp

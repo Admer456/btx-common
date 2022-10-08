@@ -26,6 +26,7 @@ class IRenderFrontend : public IPlugin
 public:
 	DeclarePluginInterface( IRenderFrontend );
 
+	virtual void 						SetBackend( Render::IBackend* renderBackend ) = 0;
 	virtual Render::IBackend*			GetBackend() const = 0;
 
 	virtual void						RenderView( const Render::IView* view ) = 0;

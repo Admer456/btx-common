@@ -43,6 +43,7 @@ inline const String NullString = "";
 
 #include "common/interfaces/plugins/IPlugin.hpp"
 #include "common/interfaces/plugins/IApplication.hpp"
+#include "common/interfaces/plugins/IRenderFrontend.hpp"
 
 #include "common/interfaces/ICore.hpp"
 #include "common/interfaces/IConsole.hpp"
@@ -53,4 +54,3 @@ inline const String NullString = "";
 #include "common/interfaces/IMaterialManager.hpp"
 #include "common/interfaces/IModelManager.hpp"
 #include "common/interfaces/IPluginSystem.hpp"
-#include "common/interfaces/IRenderFrontend.hpp"
