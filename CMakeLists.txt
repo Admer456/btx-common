@@ -49,6 +49,9 @@ set( BTX_COMMON_SOURCES
 	${BTX_COMMON_DIR}/common/Precompiled.hpp 
 	CACHE INTERNAL "" )
 
+## Folder organisation
+source_group( TREE ${BTX_COMMON_DIR} FILES ${BTX_COMMON_SOURCES} )
+
 ## BtxCommon.lib
 add_library( BtxCommon STATIC ${BTX_COMMON_SOURCES} )
 
