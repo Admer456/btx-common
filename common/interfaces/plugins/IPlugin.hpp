@@ -13,7 +13,7 @@ class IPluginSystem;    // plugins
 // Clientside-only systems
 class IAudio;           // sound
 class IInput;           // input
-class IRenderSystem;    // rendering
+class IRenderFrontend;  // rendering
 
 // The game imports this stuff from the engine
 // The engine does not provide any type of save/load system, AI
@@ -47,7 +47,7 @@ struct EngineAPI
 	// Keyboard & mouse input
 	IInput* input{ nullptr };
 	// Rendering of 3D models, 2D surfs, text etc.
-	IRenderSystem* renderer{ nullptr };
+	IRenderFrontend* renderFrontend{ nullptr };
 };
 
 // It is not advised to create an inheritance tree from IPlugin
