@@ -3,8 +3,6 @@
 
 #pragma once
 
-// Todo: adapt this: https://github.com/Admer456/btx-engine/blob/master/docs/Spec-RenderFrontend.md#concepts
-
 namespace Render
 {
 	// These are defined in rendering/IRender*.hpp
