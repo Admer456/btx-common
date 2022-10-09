@@ -26,7 +26,10 @@ class IRenderFrontend : public IPlugin
 public:
 	DeclarePluginInterface( IRenderFrontend );
 
-	virtual void 						SetBackend( Render::IBackend* renderBackend ) = 0;
+	// Before PostInit is called, the swapchain is already created by the engine
+	virtual bool 						PostInit( Render::IBackend* renderBackend, IWindow* mainWindow ) = 0;
+	// Handle window resizing etc.
+	virtual void						Update() = 0;
 	virtual Render::IBackend*			GetBackend() const = 0;
 
 	virtual void						RenderView( const Render::IView* view ) = 0;
