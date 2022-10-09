@@ -11,12 +11,14 @@ namespace Render
 	struct BatchDesc;
 	struct EntityDesc;
 	struct LightDesc;
+	struct TextureDesc;
 	struct ViewDesc;
 	struct VolumeDesc;
 	// These are implemented by the render backend
 	class IBatch;
 	class IEntity;
 	class ILight;
+	class ITexture;
 	class IView;
 	class IVolume;
 }
@@ -48,6 +50,10 @@ public:
 	virtual Render::ILight* 			CreateLight( const Render::LightDesc& desc ) = 0;
 	virtual bool 						DestroyLight( Render::ILight* light ) = 0;
 	virtual const Vector<Render::ILight*>& GetLights() const = 0;
+
+	virtual Render::ITexture*			CreateTexture( const Render::TextureDesc& desc ) = 0;
+	virtual bool 						DestroyTexture( Render::ITexture* view ) = 0;
+	virtual const Vector<Render::ITexture*>& GetTextures() const = 0;
 
 	virtual Render::IView* 				CreateView( const Render::ViewDesc& desc ) = 0;
 	virtual bool 						DestroyView( Render::IView* view ) = 0;

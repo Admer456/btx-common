@@ -35,6 +35,7 @@ inline const String NullString = "";
 #include "common/rendering/IRenderBatch.hpp"
 #include "common/rendering/IRenderEntity.hpp"
 #include "common/rendering/IRenderLight.hpp"
+#include "common/rendering/IRenderTexture.hpp"
 #include "common/rendering/IRenderView.hpp"
 #include "common/rendering/IRenderVolume.hpp"
 

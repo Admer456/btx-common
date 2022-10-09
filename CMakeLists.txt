@@ -40,6 +40,7 @@ set( BTX_COMMON_SOURCES
 	${BTX_COMMON_DIR}/common/rendering/IRenderBatch.hpp
 	${BTX_COMMON_DIR}/common/rendering/IRenderEntity.hpp
 	${BTX_COMMON_DIR}/common/rendering/IRenderLight.hpp
+	${BTX_COMMON_DIR}/common/rendering/IRenderTexture.hpp
 	${BTX_COMMON_DIR}/common/rendering/IRenderView.hpp
 	${BTX_COMMON_DIR}/common/rendering/IRenderVolume.hpp
 	${BTX_COMMON_DIR}/common/EngineConfig.hpp
