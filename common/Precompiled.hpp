@@ -18,7 +18,9 @@ using File = std::fstream;
 inline const String NullString = "";
 
 // Render backend interfaces
-#include <nvrhi/nvrhi.h>
+#include "elegy-rhi/DeviceManager.hpp"
+
+using RenderBackend = nvrhi::app::DeviceManager;
 
 // NO ENGINE-SPECIFIC HEADERS
 // Cuz' this is used by the game library as well
