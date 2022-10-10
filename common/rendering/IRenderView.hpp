@@ -21,10 +21,10 @@ namespace Render
 
 	struct ViewDesc final
 	{
-		adm::Mat4 viewMatrix{};
-		adm::Mat4 projectionMatrix{};
-		adm::Vec2 viewportSize{};
-		adm::Vec4 clearColour{};
+		Mat4 viewMatrix{};
+		Mat4 projectionMatrix{};
+		Vec2 viewportSize{};
+		Vec4 clearColour{};
 
 		// Render hooks allow you to render your own stuff on top, e.g. a GUI
 		// hook is called when the current render view is being drawn, when exactly

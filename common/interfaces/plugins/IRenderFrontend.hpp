@@ -34,11 +34,11 @@ public:
 
 	virtual void						RenderView( const Render::IView* view ) = 0;
 
-	virtual void						DebugLine( adm::Vec3 start, adm::Vec3 end, adm::Vec3 colour = adm::Vec3( 1.0f ), float life = 0.0f, bool depthTest = true) = 0;
-	virtual void						DebugRay( adm::Vec3 start, adm::Vec3 direction, float length = 1.0f, bool withArrowhead = false, adm::Vec3 colour = adm::Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
-	virtual void						DebugBox( adm::Vec3 min, adm::Vec3 max, adm::Vec3 colour = adm::Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
-	virtual void						DebugCube( adm::Vec3 position, float extents = 1.0f, adm::Vec3 colour = adm::Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
-	virtual void						DebugSphere( adm::Vec3 position, float extents = 1.0f, adm::Vec3 colour = adm::Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
+	virtual void						DebugLine( Vec3 start, Vec3 end, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true) = 0;
+	virtual void						DebugRay( Vec3 start, Vec3 direction, float length = 1.0f, bool withArrowhead = false, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
+	virtual void						DebugBox( Vec3 min, Vec3 max, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
+	virtual void						DebugCube( Vec3 position, float extents = 1.0f, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
+	virtual void						DebugSphere( Vec3 position, float extents = 1.0f, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true ) = 0;
 
 	virtual Render::IBatch* 			CreateBatch( const Render::BatchDesc& desc ) = 0;
 	virtual bool 						DestroyBatch( Render::IBatch* batch ) = 0;
