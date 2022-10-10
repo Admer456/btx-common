@@ -3,17 +3,20 @@
 
 #pragma once
 
-struct ModelDesc;
-class IModel;
+namespace Render
+{
+	struct ModelDesc;
+	class IModel;
+}
 
 class IModelManager
 {
 public:
-	virtual bool Init() = 0;
-	virtual void Shutdown() = 0;
+	virtual bool				Init() = 0;
+	virtual void				Shutdown() = 0;
 
-	virtual IModel* CreateModel( const ModelDesc& desc ) = 0;
-	virtual void DestroyModel( IModel* mode ) = 0;
-
-	virtual const Vector<IModel*>& GetModels() const = 0;
+	virtual Render::IModel* 	CreateModel( const Render::ModelDesc& desc ) = 0;
+	virtual bool				UpdateModel( Render::IModel* model, const Render::ModelDesc& desc ) = 0;
+	virtual void				DestroyModel( Render::IModel* model ) = 0;
+	virtual const Vector<Render::IModel*>& GetModels() const = 0;
 };
