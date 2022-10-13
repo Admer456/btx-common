@@ -24,14 +24,14 @@ namespace Render
 			float boneWeights[4]{};
 		};
 
-		constexpr Vertex VertexPos( Vec3 position )
+		inline Vertex VertexPos( Vec3 position )
 		{
 			Vertex v;
 			v.position = position;
 			return v;
 		}
 
-		constexpr Vertex VertexPosUv( Vec3 position, Vec2 uv )
+		inline Vertex VertexPosUv( Vec3 position, Vec2 uv )
 		{
 			Vertex v;
 			v.position = position;
