@@ -26,6 +26,9 @@ using RenderBackend = nvrhi::app::DeviceManager;
 // Cuz' this is used by the game library as well
 // Include our interfaces tho'
 
+#include "common/assetmanager/RenderData.hpp"
+#include "common/assetmanager/IModel.hpp"
+
 #include "common/console/CVar.hpp"
 #include "common/core/IWindow.hpp"
 
