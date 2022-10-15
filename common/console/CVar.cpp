@@ -126,6 +126,6 @@ bool CVarBase::Execute( const ConsoleCommandArgs& args, IConsole* console )
 
 	SetString( args[0] );
 
-	console->Print( adm::format( "'%s' is now '%s'", varName.c_str(), varValue.c_str() ) );
+	console->DPrint( adm::format( "'%s' is now '%s'", varName.c_str(), varValue.c_str() ), 1 );
 	return true;
 }
