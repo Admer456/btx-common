@@ -10,4 +10,5 @@ namespace Render
 	constexpr uint8_t RenderMaskDefault = RenderMaskAll;
 
 	using IBackend = nvrhi::IDevice;
+	using nvrhi::IBuffer;
 }
