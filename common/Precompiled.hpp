@@ -28,6 +28,7 @@ using RenderBackend = nvrhi::app::DeviceManager;
 
 #include "common/assetmanager/RenderData.hpp"
 #include "common/assetmanager/IModel.hpp"
+#include "common/assetmanager/ModelUtilities.hpp"
 
 #include "common/console/CVar.hpp"
 #include "common/core/IWindow.hpp"

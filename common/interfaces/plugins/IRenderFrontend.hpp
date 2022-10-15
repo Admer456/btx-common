@@ -42,25 +42,36 @@ public:
 
 	virtual Render::IBatch* 			CreateBatch( const Render::BatchDesc& desc ) = 0;
 	virtual bool 						DestroyBatch( Render::IBatch* batch ) = 0;
-	virtual const Vector<Render::IBatch*>& GetBatches() const = 0;
+	virtual size_t						GetNumBatches() const = 0;
+	virtual Render::IBatch*				GetBatch( uint32_t index ) = 0;
 
 	virtual Render::IEntity* 			CreateEntity( const Render::EntityDesc& desc ) = 0;
 	virtual bool 						DestroyEntity( Render::IEntity* entity ) = 0;
-	virtual const Vector<Render::IEntity*>& GetEntities() const = 0;
+	virtual size_t						GetNumEntities() const = 0;
+	virtual Render::IEntity*			GetEntity( uint32_t index ) = 0;
 
 	virtual Render::ILight* 			CreateLight( const Render::LightDesc& desc ) = 0;
 	virtual bool 						DestroyLight( Render::ILight* light ) = 0;
-	virtual const Vector<Render::ILight*>& GetLights() const = 0;
+	virtual size_t						GetNumLights() const = 0;
+	virtual Render::ILight*				GetLight( uint32_t index ) = 0;
 
 	virtual Render::ITexture*			CreateTexture( const Render::TextureDesc& desc ) = 0;
 	virtual bool 						DestroyTexture( Render::ITexture* view ) = 0;
-	virtual const Vector<Render::ITexture*>& GetTextures() const = 0;
+	virtual size_t						GetNumTextures() const = 0;
+	virtual Render::ITexture*			GetTexture( uint32_t index ) = 0;
 
 	virtual Render::IView* 				CreateView( const Render::ViewDesc& desc ) = 0;
 	virtual bool 						DestroyView( Render::IView* view ) = 0;
-	virtual const Vector<Render::IView*>& GetViews() const = 0;
+	virtual size_t						GetNumViews() const = 0;
+	virtual Render::IView*				GetView( uint32_t index ) = 0;
 
 	virtual Render::IVolume* 			CreateVolume( const Render::VolumeDesc& desc ) = 0;
 	virtual bool 						DestroyVolume( Render::IVolume* volume ) = 0;
-	virtual const Vector<Render::IVolume*>& GetVolumes() const = 0;
+	virtual size_t						GetNumVolumes() const = 0;
+	virtual Render::IVolume*			GetVolume( uint32_t index ) = 0;
+
+	virtual Render::IModel*				CreateModel( const Assets::IModel* modelAsset ) = 0;
+	virtual bool						DestroyModel( Render::IModel* model ) = 0;
+	virtual size_t						GetNumModels() const = 0;
+	virtual Render::IModel*				GetModel( uint32_t index ) = 0;
 };
