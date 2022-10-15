@@ -17,6 +17,8 @@ add_subdirectory( extern/adm-utils )
 
 set( BTX_COMMON_SOURCES
 	${BTX_COMMON_DIR}/common/assetmanager/IModel.hpp
+	${BTX_COMMON_DIR}/common/assetmanager/ModelUtilities.hpp
+	${BTX_COMMON_DIR}/common/assetmanager/ModelUtilities.cpp
 	${BTX_COMMON_DIR}/common/assetmanager/RenderData.hpp
 	${BTX_COMMON_DIR}/common/assetmanager/RenderData.cpp
 	${BTX_COMMON_DIR}/common/interfaces/ICore.hpp
