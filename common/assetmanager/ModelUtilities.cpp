@@ -49,14 +49,14 @@ inline static void AppendData( Vector<byte>& bytes, float value, VertexAttribute
 	int8_t valueInt8 = value;
 
 	byte* punner = reinterpret_cast<byte*>(&value);
-	size_t offset = 3;
+	size_t offset = 4;
 	
 	switch ( dataType )
 	{
 	case VertexAttributeDataType::Uint32: punner = reinterpret_cast<byte*>(valueUint32); break;
 	case VertexAttributeDataType::Int32: punner = reinterpret_cast<byte*>(valueInt32); break;
-	case VertexAttributeDataType::Uint16: punner = reinterpret_cast<byte*>(valueUint16); offset = 1; break;
-	case VertexAttributeDataType::Int16: punner = reinterpret_cast<byte*>(valueInt16); offset = 1; break;
+	case VertexAttributeDataType::Uint16: punner = reinterpret_cast<byte*>(valueUint16); offset = 2; break;
+	case VertexAttributeDataType::Int16: punner = reinterpret_cast<byte*>(valueInt16); offset = 2; break;
 	case VertexAttributeDataType::Uint8: punner = reinterpret_cast<byte*>(valueUint8); offset = 0; break;
 	case VertexAttributeDataType::Int8: punner = reinterpret_cast<byte*>(valueInt8); offset = 0; break;
 	}
