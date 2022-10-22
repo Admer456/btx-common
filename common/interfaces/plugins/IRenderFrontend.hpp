@@ -27,7 +27,7 @@ public:
 	DeclarePluginInterface( IRenderFrontend );
 
 	// Before PostInit is called, the swapchain is already created by the engine
-	virtual bool 						PostInit( Render::IBackend* renderBackend, IWindow* mainWindow ) = 0;
+	virtual bool 						PostInit( RenderBackend* renderBackend, IWindow* mainWindow ) = 0;
 	// Handle window resizing etc.
 	virtual void						Update() = 0;
 	virtual Render::IBackend*			GetBackend() const = 0;
