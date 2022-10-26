@@ -32,6 +32,9 @@ public:
 	virtual void						Update() = 0;
 	virtual Render::IBackend*			GetBackend() const = 0;
 
+	virtual void						BeginFrame() = 0;
+	virtual void						EndFrameAndPresent() = 0;
+
 	virtual void						RenderView( const Render::IView* view ) = 0;
 
 	virtual void						DebugLine( Vec3 start, Vec3 end, Vec3 colour = Vec3( 1.0f ), float life = 0.0f, bool depthTest = true) = 0;
