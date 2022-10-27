@@ -34,8 +34,6 @@ namespace Render
 		// Post-process material to apply when rendering this view
 		// Todo: maybe a separate subsystem for post-processing stacks?
 		IMaterial* postProcessMaterial{ nullptr };
-		// Texture to render the view into
-		ITexture* renderTarget{ nullptr };
 		// The render mask of this view
 		// Objects will render if (view->renderMask & renderObject->renderMask)
 		uint32_t renderMask{ RenderMaskDefault };
@@ -44,6 +42,10 @@ namespace Render
 	class IView
 	{
 	public:
+		virtual nvrhi::IFramebuffer* GetFramebuffer() const = 0;
+		virtual nvrhi::ITexture* GetColourTexture() const = 0;
+		virtual nvrhi::ITexture* GetDepthTexture() const = 0;
+
 		virtual ViewDesc& GetDesc() = 0;
 		virtual const ViewDesc& GetDesc() const = 0;
 	};
