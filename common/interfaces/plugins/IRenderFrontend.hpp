@@ -33,7 +33,7 @@ public:
 	virtual Render::IBackend*			GetBackend() const = 0;
 
 	virtual void						BeginFrame() = 0;
-	virtual void						EndFrameAndPresent() = 0;
+	virtual void						EndFrameAndPresent( const Render::IView* view ) = 0;
 
 	virtual void						RenderView( const Render::IView* view ) = 0;
 
