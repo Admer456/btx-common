@@ -84,13 +84,12 @@ public:
 
 	virtual void Maximise() = 0;
 	virtual void Minimise() = 0;
-	// Todo: we need a Vec2 type real bad :(
-	virtual void Resize( adm::Vec3 size ) = 0;
-	virtual void Resize( adm::Vec3 topLeft, adm::Vec3 bottomRight ) = 0;
+	virtual void Resize( adm::Vec2 size ) = 0;
+	virtual void Resize( adm::Vec2 topLeft, adm::Vec2 bottomRight ) = 0;
 	virtual bool HasResized() const = 0;
 
-	virtual adm::Vec3 GetSize() const = 0;
-	virtual adm::Vec3 GetPosition() const = 0;
+	virtual adm::Vec2 GetSize() const = 0;
+	virtual adm::Vec2 GetPosition() const = 0;
 
 	virtual void* GetInternalPointer() const = 0;
 };
