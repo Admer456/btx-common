@@ -45,6 +45,9 @@ namespace Render
 		virtual nvrhi::IFramebuffer* GetFramebuffer() const = 0;
 		virtual nvrhi::ITexture* GetColourTexture() const = 0;
 		virtual nvrhi::ITexture* GetDepthTexture() const = 0;
+		// When presenting the frame, this binding set is used to tell the GPU
+		// to use this view's colour & depth textures
+		virtual nvrhi::IBindingSet* GetBindingSet() const = 0;
 
 		virtual ViewDesc& GetDesc() = 0;
 		virtual const ViewDesc& GetDesc() const = 0;
