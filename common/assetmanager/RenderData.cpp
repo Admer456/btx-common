@@ -12,8 +12,7 @@ size_t VertexDataSegment::GetNumVertices() const
 	size_t numComponents = 4;
 	switch ( type )
 	{
-	case VertexAttributeType::Position:
-	case VertexAttributeType::Normal: numComponents = 3; break;
+	case VertexAttributeType::Position: numComponents = 3; break;
 	case VertexAttributeType::Uv1:
 	case VertexAttributeType::Uv2:
 	case VertexAttributeType::Uv3:
