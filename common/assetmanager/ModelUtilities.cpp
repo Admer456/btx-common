@@ -34,9 +34,9 @@ inline static float Normalised( T value, VertexAttributeDataType dataType )
 	return value;
 }
 
-inline static void AppendData( Vector<byte>& bytes, float value, VertexAttributeDataType dataType, bool normalised = false )
+inline static void AppendData( Vector<byte>& bytes, float value, VertexAttributeDataType dataType, bool normalise = false )
 {
-	if ( normalised )
+	if ( normalise )
 	{
 		value = Normalised( value, dataType );
 	}
@@ -176,28 +176,28 @@ void ModelBuilder::AddBones( Vec4 weights, uint8_t boneId1, uint8_t boneId2, uin
 	return AddData( boneIds, VertexAttributeType::BoneIndices, VertexAttributeDataType::Uint8 );
 }
 
-void ModelBuilder::AddData( Vec2 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalised )
+void ModelBuilder::AddData( Vec2 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalise )
 {
 	auto& rawData = segments[attribute].rawData;
-	AppendData( rawData, v.x, dataType, normalised );
-	AppendData( rawData, v.y, dataType, normalised );
+	AppendData( rawData, v.x, dataType, normalise );
+	AppendData( rawData, v.y, dataType, normalise );
 }
 
-void ModelBuilder::AddData( Vec3 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalised )
+void ModelBuilder::AddData( Vec3 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalise )
 {
 	auto& rawData = segments[attribute].rawData;
-	AppendData( rawData, v.x, dataType, normalised );
-	AppendData( rawData, v.y, dataType, normalised );
-	AppendData( rawData, v.z, dataType, normalised );
+	AppendData( rawData, v.x, dataType, normalise );
+	AppendData( rawData, v.y, dataType, normalise );
+	AppendData( rawData, v.z, dataType, normalise );
 }
 
-void ModelBuilder::AddData( Vec4 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalised )
+void ModelBuilder::AddData( Vec4 v, VertexAttributeType attribute, VertexAttributeDataType dataType, bool normalise )
 {
 	auto& rawData = segments[attribute].rawData;
-	AppendData( rawData, v.m.x, dataType, normalised );
-	AppendData( rawData, v.m.y, dataType, normalised );
-	AppendData( rawData, v.m.z, dataType, normalised );
-	AppendData( rawData, v.m.w, dataType, normalised );
+	AppendData( rawData, v.m.x, dataType, normalise );
+	AppendData( rawData, v.m.y, dataType, normalise );
+	AppendData( rawData, v.m.z, dataType, normalise );
+	AppendData( rawData, v.m.w, dataType, normalise );
 }
 
 void ModelBuilder::ClearData()
