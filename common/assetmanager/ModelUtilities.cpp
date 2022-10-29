@@ -134,7 +134,7 @@ void ModelBuilder::AddPosition( Vec3 position )
 
 void ModelBuilder::AddNormal( Vec3 normal )
 {
-	return AddData( normal, VertexAttributeType::Normal, VertexAttributeDataType::Float );
+	return AddData( normal, VertexAttributeType::Normal, VertexAttributeDataType::Int8, true );
 }
 
 void ModelBuilder::AddTangentPair( Vec4 tangentAndBitangent )
