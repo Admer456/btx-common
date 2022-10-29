@@ -28,5 +28,5 @@ size_t VertexDataSegment::GetNumVertices() const
 	case VertexAttributeDataType::Int8: numBytesPerComponent = 1; break;
 	}
 
-	return numBytes * numComponents * numBytesPerComponent;
+	return numBytes / (numComponents * numBytesPerComponent);
 }
