@@ -14,6 +14,8 @@ namespace Render
 
 		virtual size_t GetNumFaces() const = 0;
 
+		virtual size_t GetNumIndices( uint32_t face ) const = 0;
+		virtual size_t GetNumVertices( uint32_t face ) const = 0;
 		virtual IBuffer* GetVertexBuffer( uint32_t face, Assets::RenderData::VertexAttributeType attribute ) const = 0;
 		virtual IBuffer* GetIndexBuffer( uint32_t face ) const = 0;
 
