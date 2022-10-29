@@ -18,7 +18,7 @@ namespace Assets
 			// float[3]
 			Position,
 			// XYZ
-			// uint8[3]
+			// int8[4]; 4 because there's no XYZ uint8 format in NVRHI
 			Normal,
 			// XYZ -> tangent; W -> sign of the bitangent
 			// int8[4]
